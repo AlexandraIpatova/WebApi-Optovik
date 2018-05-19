@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Список товаров</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/demo.css" rel="stylesheet">
+
+    <script src="../lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+
+
+    <!--
+    <dialog>
+        <p>Добавление товара</p>
+
+        <button id="close">Закрыть</button>
+        <label> Название товара <input type="text" name="name"></label>
+
+    </dialog>
+
+
+
+         <button id="show">Добавить товар</button>
+
+       <script>
+       var dialog = document.querySelector('dialog');
+       document.querySelector('#show').onclick = function() {
+       dialog.show(); // открыть диалоговое окно
+       };
+
+       document.querySelector('#close').onclick = function() {
+        dialog.close(); // закрыть диалоговое окно
+        } ;</script>
+
+    -->
+
+    <div class="wrapper">
+        <header>
+            <div class="layout-buttons">
+
+            </div>
+            <h1>Список товаров</h1>
+            <nav>
+                <a href="index.html" class="current">Cписок товаров</a>
+                <a href="grid.html">Удобрения</a>
+                <a href="photos.html">Хозтовары</a>
+                <a href="buttons.html">Для дома</a>
+                <a href="add.html" style="float:right">Добавить товары</a>
+            </nav>
+
+        </header>
+
+        <ul class="products clearfix">
+            <li class="product-wrapper">
+                <!-- <a href="" class="product">-->
+                <div class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/1.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Лопата</h2>
+                            <p>Всем нужна лопата!</p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>740</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>640</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--</a>-->
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/2.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Горшок</h2>
+                            <p>Всем нужен классный горшок</p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>500</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>450</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/3.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Удобрение</h2>
+                            <p>Удобрение</p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>740</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>640</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/4.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Шампунь</h2>
+                            <p>Чтобы мыть волосы</p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>740</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>640</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/5.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Грабли</h2>
+                            <p>Свежие листья греби</p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability"><span class="icon icon-check"></span>B наличии</div>								<span class="product-price product-price-old">
+                                <b>740</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>640</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/6.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Грунт</h2>
+                            <p>
+                                земля для вас
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>550</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>500</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/7.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Кондиционер</h2>
+                            <p></p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>740</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>640</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="product-wrapper">
+                <a href="" class="product">
+                    <div class="product-main">
+                        <div class="product-photo">
+                            <img src="../images/8.jpg" alt="">
+                        </div>
+                        <div class="product-text">
+                            <h2 class="produvt-name">Вантуз</h2>
+                            <p></p>
+
+                        </div>
+                    </div>
+                    <div class="product-details-wrap">
+                        <div class="product-details">
+                            <div class="product-availability">В наличии</div>
+                            <span class="product-price product-price-old">
+                                <b>740</b>
+                                <small>руб.</small>
+                            </span>
+                            <span class="product-price">
+                                <b>640</b>
+                                <small>руб.</small>
+                            </span>
+                        </div>
+                        <div class="product-buttons-wrap">
+                            <div class="buttons">
+                                <span class="button to-cart">В корзину</span>
+                                <span class="button to-cart">Изменить</span>
+                                <span class="button delete">Удалить</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+
+
+    <h3 style="color: white;">Вход для зарегистрированных пользователей</h3>
+    <form class="adding">
+        <div class="msgClass">
+            <div id="msg"></div>
+            <ul id="formError"></ul>
+        </div>
+        <div>
+            <label for="">Email: </label><br />
+            <input type="text" id="Email" name="Email">
+        </div>
+        <div>
+            <label for="">Пароль: </label><br />
+            <input type="password" id="Password" name="Password">
+        </div>
+        <div>
+            <input type="submit" id="loginBtn" name="loginBtn">
+        </div>
+        <label id="msgDel">tytyt</label>
+    </form>
+
+    <!--<div>
+        <h3 style="color: white;">Удаление товара</h3>
+        <input type="number" id="deleteDiv">
+        <button onclick="DeleteUser();">Delete</button>
+        <div class="msgClass">
+            <div id="msgDel"></div>
+        </div>
+    </div>-->
+
+    <form>
+        <div class="msgClass">
+            <div id="msgAuth"></div>
+            <div id="msg"></div>
+            <ul id="formError"></ul>
+        </div>
+
+    </form>
+
+    <script>
+        function GetUsers() {
+            $.ajax({
+                url: '/api/Goods',
+                type: 'GET',
+                contentType: "application/json",
+                success: function (Goods) {
+                    var rows = "";
+                    $.each(Goods, function (index, Good) {
+                        // добавляем полученные элементы в таблицу
+                        rows += row(Good);
+                    })
+                    $(".products").append(rows);
+                }
+            });
+        }
+
+        // создание строки для таблицы
+        var row = function (Good) {
+            return "<li class='product-wrapper'>" +
+                "<div class='product'>" +
+                "<div class='product-main'>" +
+                "<div class='product-photo'>" +
+                "<img src='CSS/Images/example.png' alt='Фото отсутствует'>" +
+                //"<img src=" + orderobject.image + " alt='Фото отсутствует'>" +
+                "</div>" +
+                "<div class='product-text'>" +
+                "<h2 class='produvt-name'>" + Good.name + "</h2>" +
+
+                "</div>" +
+                "</div>" +
+                "<div class='product-details-wrap'>" +
+                "<div class='product-details'>" +
+                //"<div class='product-availability'>В наличии: " + orderobject.availability + "</div>" +
+                "<div class='product-type'>Тип: " + Good.type.name + "</div>" +
+                "<div class='product-manufacturer'>Производитель: " + Good.manufacturer.name + "</div>" +
+                "<span class='product-price product-price-old'>" +
+                "<b>" + (Good.price + 100) + "</b>" +
+                "<small>руб.</small>" +
+                "</span>" +
+                "<span class='product-price'>" +
+                "<b>" + Good.price + "</b>" +
+                "<small>руб.</small>" +
+                "</span>" +
+                "</div>" +
+                "<div class='product-buttons-wrap'>" +
+                "<div class='buttons'>" +
+                "<span class='button to-cart'>В корзину</span>" +
+                "<span class='button to-cart'>Изменить</span>" +
+                "<span class='removeLink button delete' data-id='" + Good.goodId + "'>Удалить</span>" +
+                "</div>" +
+                " </div>" +
+                "</div>" +
+                "</div>" +
+                "</li>";
+
+
+
+
+        }
+
+        // Удаление пользователя
+        //////////////////////////////////function DeleteUser(id) {
+        //////////////////////////////////    var request = new XMLHttpRequest();
+        //////////////////////////////////    request.onload = function (ev) {
+        //////////////////////////////////        var msg = ""
+        //////////////////////////////////        if (request.status == 401) {
+        //////////////////////////////////            msg = "У вас не хватает прав для удаления";
+        //////////////////////////////////        } else if (request.status == 200) {
+        //////////////////////////////////            msg = "Запись удалена";
+        //////////////////////////////////        } else {
+        //////////////////////////////////            msg = "Неизвестная ошибка";
+        //////////////////////////////////        }
+        //////////////////////////////////        document.getElementById("msgDel").innerHTML = msg;
+        //////////////////////////////////    }
+        //////////////////////////////////    //select = document.getElementById("deleteDiv");
+
+        //////////////////////////////////    $.ajax({
+        //////////////////////////////////        url: "/api/Goods/" + id,
+        //////////////////////////////////        contentType: "application/json",
+        //////////////////////////////////        type: "DELETE",
+        //////////////////////////////////        success: function (obj) {
+
+        //////////////////////////////////        }
+        //////////////////////////////////    })
+        //////////////////////////////////    //url = "/api/Goods/" + id;
+        //////////////////////////////////    //request.open("DELETE", url, false);
+        //////////////////////////////////    request.send();
+        //////////////////////////////////    //location.reload();
+
+        //////////////////////////////////}
+        function DeleteUser(id) {
+            //$.ajax({
+            //    url: "/api/Goods/" + id,
+            //    contentType: "application/json",
+            //    type: "DELETE",
+            //    success: function (obj) {
+
+            //    }
+            //})
+
+            var request = new XMLHttpRequest();
+            request.onload = function (ev) {
+                var msg = ""
+                if (request.status == 401) {
+                    msg = "У вас не хватает прав для удаления";
+                } else if ((request.status == 200) || (request.status == 204)) 
+                { msg = "Запись удалена"; location.reload();}
+                 else {
+                    msg = "Неизвестная ошибка";
+                }
+                document.getElementById("msgDel").innerHTML = msg;
+            }
+            select = document.getElementById("deleteDiv");
+            //id = select.options[select.selectedIndex].value;
+            url = "/api/Goods/" + id;
+            request.open("DELETE", url, false);
+            request.send();
+        }
+
+        function ParseResponseMsg() {
+            // Считывание данных с формы
+            email = document.getElementById("Email").value;
+            password = document.getElementById("Password").value;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/api/Account/Login");
+            xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xmlhttp.onreadystatechange = function () {
+                // Очистка контейнера вывода сообщений
+                document.getElementById("msg").innerHTML = ""
+                var mydiv = document.getElementById('formError');
+                while (mydiv.firstChild) {
+                    mydiv.removeChild(mydiv.firstChild);
+                }
+                // Обработка ответа от сервера
+                myObj = JSON.parse(this.responseText);
+                document.getElementById("msg").innerHTML = myObj.message;
+                // Вывод сообщений об ошибках
+                if (typeof myObj.error !== "undefined" && myObj.error.length > 0) {
+                    for (var i = 0; i < myObj.error.length; i++) {
+                        var ul = document.getElementsByTagName("ul");
+                        var li = document.createElement("li");
+                        li.appendChild(document.createTextNode(myObj.error[i]));
+                        ul[0].appendChild(li);
+                    }
+                }
+                document.getElementById("Password").value = "";
+            };
+            // Запрос на сервер
+            xmlhttp.send(JSON.stringify({
+                email: email,
+                password: password
+            }));
+        };
+        // Обработка клика по кнопке
+        document.getElementById("loginBtn").addEventListener("click", ParseResponseMsg);
+
+        function GetCurrentUser() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/api/Account/isAuthenticated", true);
+            xmlhttp.onreadystatechange = function () {
+                var myObj = "";
+                myObj = xmlhttp.responseText != "" ? JSON.parse(xmlhttp.responseText) : {};
+                document.getElementById("msgAuth").innerHTML = myObj.message;
+            }
+            xmlhttp.send();
+        }
+
+
+
+        // нажимаем на ссылку Удалить
+        $("body").on("click", ".removeLink", function () {
+            var id = $(this).data("id");
+            DeleteUser(id);
+        })
+        GetUsers();
+
+    </script>
+
+
+
+    <!--<script>
+        function ParseResponseMsg() {
+            // Считывание данных с формы
+            email = document.getElementById("Email").value;
+            password = document.getElementById("Password").value;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/api/Account/Login");
+            xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xmlhttp.onreadystatechange = function () {
+                // Очистка контейнера вывода сообщений
+                document.getElementById("msg").innerHTML = ""
+                var mydiv = document.getElementById('formError');
+                while (mydiv.firstChild) {
+                    mydiv.removeChild(mydiv.firstChild);
+                }
+                // Обработка ответа от сервера
+                myObj = JSON.parse(this.responseText);
+                document.getElementById("msg").innerHTML = myObj.message;
+                // Вывод сообщений об ошибках
+                if (typeof myObj.error !== "undefined" && myObj.error.length > 0) {
+                    for (var i = 0; i < myObj.error.length; i++) {
+                        var ul = document.getElementsByTagName("ul");
+                        var li = document.createElement("li");
+                        li.appendChild(document.createTextNode(myObj.error[i]));
+                        ul[0].appendChild(li);
+                    }
+                }
+                document.getElementById("Password").value = "";
+            };
+            // Запрос на сервер
+            xmlhttp.send(JSON.stringify({
+                email: email,
+                password: password
+            }));
+        };
+        // Обработка клика по кнопке
+        document.getElementById("loginBtn").addEventListener("click", ParseResponseMsg);
+
+        function GetCurrentUser() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/api/Account/isAuthenticated", true);
+            xmlhttp.onreadystatechange = function () {
+                var myObj = "";
+                myObj = xmlhttp.responseText != "" ? JSON.parse(xmlhttp.responseText) : {};
+                document.getElementById("msgAuth").innerHTML = myObj.message;
+            }
+            xmlhttp.send();
+        }
+
+
+    </script>-->
+
+
+
+
+
+</body>
+</html>

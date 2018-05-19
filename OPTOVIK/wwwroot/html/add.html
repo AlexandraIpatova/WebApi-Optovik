@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Список товаров</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/demo.css" rel="stylesheet">
+
+    <script src="../lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+
+
+    <div class="wrapper">
+        <header>
+            <div class="layout-buttons">
+
+            </div>
+            <h1>Список товаров</h1>
+            <nav>
+                <a href="index.html">Cписок товаров</a>
+                <a href="grid.html">Удобрения</a>
+                <a href="photos.html">Хозтовары</a>
+                <a href="buttons.html">Для дома</a>
+                <a href="add.html" style="float:right">Добавить товары</a>
+            </nav>
+
+        </header>
+
+
+        <div class="adding">
+            <form enctype="multipart/form-data" name="GoodsForm">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input class="form-control" name="name" />
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="price">Цена:</label>
+                    <input class="form-control" name="price" />
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="manufacturerId">Id производителя:</label>
+                    <input class="form-control" name="manufacturerId" />
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="typeId">Id типа:</label>
+                    <input class="form-control" name="typeId" />
+                </div>
+                <br />
+
+                <div class="panel-body">
+                    <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+                </div>
+
+            </form>
+            </div>
+
+            <!--<div class="adding">-->
+            <!--<form enctype="multipart/form-data" name="GoodsForm">
+
+            <label> Название товара <input type="text" name="name"></label>
+            <br><br>
+            <label> Производитель <input type="text" name=" maker"></label>
+            <br><br>
+            <label> Цена <input type="text" name="price"></label>
+            <br><br>
+            <label> Категория <input type="text" name="type"></label>
+            <br><br>
+            <br>
+            <br>
+
+            <input type="submit" value="Отправить">
+
+        </form>-->
+            <!--</div>-->
+
+
+
+
+
+
+
+
+        </div>
+
+        <script>
+            // сброс формы
+            function reset() {
+                var form = document.forms["GoodsForm"];
+                form.reset();
+                //form.elements["objectId"].value = 0;
+            }
+
+            // Добавление объект
+            function CreateUser(objName, objPrice, objTypeId, objManufacturerId/*, objImage*/) {
+                $.ajax({
+                    url: "/api/Goods",
+                    contentType: "application/json",
+                    method: "POST",
+                    data: JSON.stringify({
+                        name: objName,
+                        price: objPrice,
+                        typeId: objTypeId,
+                        manufacturerId: objManufacturerId
+                    }),
+                    success: function (obj) {
+                        reset();
+                        $("table tbody").append(row(obj));
+                    }
+                })
+            }
+
+
+            // отправка формы
+            $("form").submit(function (e) {
+                e.preventDefault();
+                //var id = this.elements["objectId"].value;
+                var name = this.elements["name"].value;
+                var price = this.elements["price"].value;
+                var maker = this.elements["manufacturerId"].value;
+                var type = this.elements["typeId"].value;
+                //var typeId = this.elements["typeId"].value;
+                //var image = this.elements["image"].value;
+                CreateUser(name, price, type, maker /*, image*/);
+            });
+
+
+                    CreateUser("123", "123", "1", "1");
+        </script>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+                crossorigin="anonymous"></script>
+        <script src="../js/script.js"></script>
+</body>
+</html>
+
+<!--Invoke-RestMethod http://localhost:59296/api/Goods/4 -Method DELETE-->
